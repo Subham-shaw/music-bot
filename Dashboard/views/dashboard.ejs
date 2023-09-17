@@ -1,0 +1,35 @@
+<%- include('header') %>
+<head>
+    <link rel="stylesheet" href="../public/dash.css">
+    <title>
+        <%= user.username %> | Dashboard
+    </title>
+</head>
+<div id="all">
+    <% if(user && user.id) { 
+        user.guilds 
+        .sort((a, b)=> {
+             return (botClient.guilds.cache.get(a.id) === botClient.guilds.cache.get(b.id)) ? 0 : a ? -1 : 1;
+        })
+        .forEach(guild => {
+        %>
+        <%- guild.icon ? `<div id="server"
+            style="background-image: url('https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}')">` : `<div id="server" style="background-image: url('../public/dc.png'); ">` %>
+        <div class="bg-black">
+            <div class="text">
+                <h3 class="title"> <%= guild.name %> </h3>
+                    <% if (botClient.guilds.cache.get(guild.id)) { %>
+                        <div class="button">
+                            <a class="edit" href="https://<%- domain %>/dashboard/<%- guild.id %>">Edit Settings</a>
+                        </div>
+                    <% } else { %>
+                        <div class="button">
+                            <a href= "<%= `https://discordapp.com/oauth2/authorize?client_id=${botClient.user.id}&scope=bot%20applications.commands&guild_id=${guild.id}&response_type=code&redirect_uri=${encodeURIComponent(`${callback}`)}`  %>"
+                                class="inv">Invite Bot</a>
+                        </div>
+                    <% } %>
+               </div>
+        </div>
+        </div>
+                <% })} %>
+</div>

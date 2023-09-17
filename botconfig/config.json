@@ -1,0 +1,12 @@
+{
+    "token": "",
+    "ownerId": "",
+    "clientID": "",
+    "clientSecret": "", 
+    "Dashboard": {
+        "enabled": true,
+        "callback": "https://localhost:8000/callback",
+        "domain": "localhost:8000",
+        "port": 8000
+    }
+}

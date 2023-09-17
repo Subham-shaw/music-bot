@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+li {
+    list-style-type: none;
+}
+
+li a {
+    margin: 10px;
+    text-decoration: none;
+    color: #C1C2C5;
+}
+
+li a:hover {
+    color: #fff;
+}
+
+h1 {
+    font-weight: lighter;
+    cursor: pointer;
+}
+h1 span {
+    color: gold;
+}
+
+#btn-red {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 10px;
+    background-image: linear-gradient(to right, #c85450 0%, #bb1717 51%, #da0b0b 100%);
+    background-size: 200% auto;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#btn-red:hover {
+    background-position: right center;
+    box-shadow: 0 0 20px #ff0f0f;
+}
+
+#btn-green {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #50C878 0%, #4CBB17 51%, #0BDA51 100%);
+    background-size: 200% auto;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+
+}
+#btn-green:hover {
+    background-position: right center;
+    box-shadow: 0 0 20px #0FFF50;
+}
+
+#btn {
+    border: 2px solid transparent;
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+    padding: 10px;
+    flex: 1 1 auto;
+    margin: 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    position: relative;
+    animation-duration: 1s
+    
+}
+
+#btn:hover {
+    background-position: right center;
+    box-shadow: 0 0 20px gold;
+}
+
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }

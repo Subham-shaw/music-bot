@@ -1,0 +1,21 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="<%= botClient.user.displayAvatarURL({size: 128}) %>">
+<link rel="stylesheet" href="../public/header.css">
+
+<nav>
+    <h1><span>E</span>xecuter</h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/commands">Commands</a></li>
+        <li><a href="/discord" target="_blank">Discord</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <% if(user && user.id) { %>
+            <li><a href="/logout" id="btn-red"><img src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png" style="width: 30px;margin-bottom:3%;vertical-align:middle">
+                    Logout</a></li>
+            <% }else { %>
+                <li><a href="/login" id="btn-green">Login</a></li>
+                <% }%>
+    </ul>
+</nav>
+
+<!-- <li><a href="https://discord.com/api/oauth2/authorize?client_id=<%= botClient.user.id %>&permissions=8&scope=bot%20applications.commands">Invite</a></li> -->

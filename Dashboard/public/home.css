@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gold;
+    border-radius: 10rem;
+}
+
+* {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 400px;
+    justify-items: center;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    position: relative;
+    animation-duration: 1s
+}
+
+a, h3, p {
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    background: -webkit-linear-gradient(45deg, #fdd700, orange);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+    position: relative;
+}
+
+p {
+    margin: 0 300px;
+    color: #C1C2C5;
+    font-size: 20px;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+    position: relative;
+}
+
+div {
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
